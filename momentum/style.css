@@ -12,8 +12,21 @@ body {
   justify-content: center;
   text-align: center;
   height: 100vh;
+  background: no-repeat 50% 50%;
   background-size: cover;
-  color: #000000;
+  background-position: 50% 50%;
+  color: wheat;
+  filter: drop-shadow(2px 4px 15px black);
+  transition: background-image .5s linear;
+
+  max-width: 1280px;
+  margin: 0 auto;
+
+  overflow-x: hidden;
+}
+
+.date {
+  font-size: 2em;
 }
 
 .time {
@@ -29,8 +42,144 @@ h2 {
   opacity: 0.8;
 }
 
-@media (max-width: 700px) {
-  .time {
-    font-size: 6rem;
+.button {
+  margin-top: 16px;
+  font-size: 1.5em;
+  background: none;
+  color: silver;
+  border-color: wheat;
+  border-style: solid;
+  border-radius: 50px;
+  padding: 4px 15px;
+  width: 210px;
+
+  transition: background-color .2s linear;
+}
+
+.button:hover {
+  background-color: rgb(120 45 126 / 77%);
+  cursor: pointer;
+}
+
+.joke {
+  margin-top: 10px; 
+  width: min(100%, 500px);
+  font-size: 1.3em;
+}
+
+.weather {  
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+.city {
+  min-width: 200px;
+}
+
+@media (max-width: 1000px) {
+  .weather {
+    margin: 15px 0 30px 20px;
+    align-self: start;
   }
 }
+
+@media (max-width: 900px) {
+  .time {
+    font-size: 5em;
+  }
+
+  .description {
+    font-size: 1.5em;
+  }
+
+  .icon {
+    width: 60px;
+  }
+}
+
+@media(max-width: 840px) {
+  .description {
+    font-size: 1em;
+  }
+
+  .icon {
+    width: 40px;
+  }
+
+  .date {
+    font-size: 1.5em;
+  }
+
+  .time {
+    font-size: 4rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    width: 150px;
+    font-size: 1em;
+  }
+  
+  .city {
+    min-width: 100px;
+  }
+  .weather {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 700px) {
+  
+}
+
+@media (max-width: 540px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 470px) {
+  .body {
+    padding-top: 30px;
+  }
+
+  .weather {
+    margin: 0 0 0 20px;
+  }
+
+  .icon {
+    width: 25px;
+  }
+
+  .date {
+    font-size: 1em;
+  }
+
+  .time {
+    font-size: 3rem;
+  }
+
+  .greeting,
+  .name {
+    font-size: .7em;
+  }
+
+  .joke {
+    font-size: .7em;
+  }
+}
+

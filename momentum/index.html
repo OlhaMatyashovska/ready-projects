@@ -8,6 +8,17 @@
   <title>momentum</title>
 </head>
 <body>
+  <div class="weather">
+    <span class="city" contenteditable="true" style="border: 2px solid wheat; padding: 5px 10px; border-radius: 5px; margin-bottom: 10px;"></span>
+    <span class="error"></span>
+    <span class="info"></span>
+    <div class="description"></div>
+    <h1 class="temp" style="margin: 0; font-size: 1em;"></h1>
+    <div class="humidity"></div>
+    <div class="wind-speed"></div>
+    <div class="location"></div>
+  </div>
+  <div class="date">Sunday, 25th of October</div>
   <time class="time"></time>
   <h1>
     <span class="greeting"></span>
@@ -15,6 +26,12 @@
   </h1>
   <h2>What Is Your Focus For Today?</h2>
   <h2 class="focus" contenteditable="true"></h2>
+
+  <button class="button previous">Previous Image</button>
+  <button class="button next">Next Image</button>
+
+  <div class="joke" ></div>
+  <button class="button joke-btn">Get a new joke</button>
   <script src="script.js"></script>
 </body>
 </html>
